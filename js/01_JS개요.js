@@ -24,9 +24,8 @@ function 라이트모드() {
   body.style.backgroundColor = "white";
 }
 function 반대모드() {
-body.style.filter = body.style.filter === "invert(100%)" ? "none" : "invert(100%)";
+  body.style.filter = "invert()";
 }
-
 function 블루모드() {
   body.style.color = "yellow";
   body.style.backgroundColor = "blue";
