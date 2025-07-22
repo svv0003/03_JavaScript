@@ -29,3 +29,46 @@ function plusFn() {
   result.innerText = Number(number1) + Number(number2);
 }
 
+function minusFn() {
+  const number1 = document.getElementById("input1").value;
+  const number2 = document.getElementById("input2").value;
+  alert("number1의 값은 " + number1);
+  alert("number2의 값은 " + number2);
+  alert("두 수의 차는 " + (Number(number1) - Number(number2)));
+  console.log(Number(number1) - Number(number2));
+  const result = document.getElementById("계산결과");
+  result.innerText = Number(number1) - Number(number2);
+}
+
+function multiFn() {
+  const number1 = document.getElementById("input1").value;
+  const number2 = document.getElementById("input2").value;
+  alert("number1의 값은 " + number1);
+  alert("number2의 값은 " + number2);
+  alert("두 수의 곱은 " + (Number(number1) * Number(number2)));
+  console.log(Number(number1) * Number(number2));
+  const result = document.getElementById("계산결과");
+  result.innerText = Number(number1) * Number(number2);
+}
+
+function divFn() {
+  const number1 = document.getElementById("input1").value;
+  const number2 = document.getElementById("input2").value;
+  alert("number1의 값은 " + number1);
+  alert("number2의 값은 " + number2);
+  alert("두 수의 나눈 값의 몫은 " + (Number(number1) / Number(number2)));
+  console.log(Number(number1) / Number(number2));
+  const result = document.getElementById("계산결과");
+  result.innerText = Number(number1) / Number(number2);
+}
+
+function modFn() {
+  const number1 = document.getElementById("input1").value;
+  const number2 = document.getElementById("input2").value;
+  alert("number1의 값은 " + number1);
+  alert("number2의 값은 " + number2);
+  alert("두 수의 나눈 값의 나머지는 " + (Number(number1) % Number(number2)));
+  console.log(Number(number1) % Number(number2));
+  const result = document.getElementById("계산결과");
+  result.innerText = Number(number1) % Number(number2);
+}
