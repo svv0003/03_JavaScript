@@ -21,10 +21,14 @@
         <label>첫 번째 값 : <input type="number" id="input1" /></label>
         <label>두 번째 값 : <input type="number" id="input2" /></label>
       </div>
-    </div>
-    <div class="row btn-row">
-      <!-- 버튼 클릭 시 plusFn() 함수 호출(실행) -->
-      <button onclick="plusFn()">=</button>
+      <div class="row btn-row">
+        <!-- 버튼 클릭 시 plusFn() 함수 호출(실행) -->
+        <button onclick="plusFn()">+</button>
+        <button onclick="minusFn()">-</button>
+        <button onclick="multiFn()">*</button>
+        <button onclick="divFn()">/</button>
+        <button onclick="modFn()">%</button>
+      </div>
     </div>
     <div class="row">
       <h2>결과 : <span id="계산결과">1234</span></h2>
