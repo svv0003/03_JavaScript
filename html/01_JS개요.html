@@ -25,23 +25,26 @@
       ECMA Script 표준을 따르는 대표적인 웹 기술
       (JS 버전 이름 : ES5, ES6, ES7 ...)
     </pre>
-    <hr>
+    <hr />
     <h1>JavaScript 코드 작성 방법</h1>
-    <liㅣ>
+    <ol>
       <li>브라우저 개발자 도구 -> console 직접 작성</li>
-      <li>HTML 내부에 Script 태그를 이용해서 작성(Internal 방식)
-        <br>
+      <li>
+        HTML 내부에 Script 태그를 이용해서 작성(Internal 방식)
+        <br />
         <!-- 버튼이 클릭 되었을 때 internalFn() 함수를 호출(실행) -->
-         <button type="button" onclick="internalFn()">Internal 방식 확인!</button>
-         <script>
+        <button type="button" onclick="internalFn()">
+          Internal 방식 확인!
+        </button>
+        <script>
           // 한 줄 주석
           // <script> 태그를 작성하는 순간부터 JavaScript 언어를 작성할 수 있다
           /*
           Script 범위 태그 주석 : JS 코드를 주석으로 작성할 수 있고,
           설명이나 표기를 작성할 수 있다
           */
-         // function : 함수, 기능
-         /*
+          // function : 함수, 기능
+          /*
          매개변수(=parameter) : 媒介變數  중매매 개입할개 변할변 셀수
                               중간에 개입하여 값을 변하게 하는 변수 이름 위치
 
@@ -69,24 +72,24 @@
         </script>
       </li>
       <li>
-        HTML 외부에 존재하는 .js 파일을 연결해서 사용하는 방법(External 방식)<br>
-        <button type="button" onclick="externalFn()">External 방식 확인!</button>
-          <!-- html 외부에 작성한 js 확장자 연결하는 방법 
+        HTML 외부에 존재하는 .js 파일을 연결해서 사용하는 방법(External 방식)<br />
+        <button type="button" onclick="externalFn()">
+          External 방식 확인!
+        </button>
+        <!-- html 외부에 작성한 js 확장자 연결하는 방법 
            <script src="js 파일 위치/js 파일명.js"></script> -->
       </li>
     </ol>
-    <hr>
+    <hr />
     <h1>JS 맛보기</h1>
     <button type="button" onclick="라이트모드()">라이트 모드</button>
     <button type="button" onclick="다크모드()">다크 모드</button>
     <button type="button" onclick="반대모드()">반대 모드</button>
-    
-    <hr>
+
+    <hr />
     <h1>매개변수로 색상 변경하기 맛보기</h1>
     <button type="button" onclick="블루모드()">블루 모드</button>
     <button type="button" onclick="핑크모드()">핑크 모드</button>
-    
-
 
     <script src="../js/01_JS개요.js"></script>
   </body>
