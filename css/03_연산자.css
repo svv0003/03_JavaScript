@@ -10,3 +10,7 @@
   display: flex;
   margin-top: 10px;
 }
+
+.row label {
+  display: block;
+}
