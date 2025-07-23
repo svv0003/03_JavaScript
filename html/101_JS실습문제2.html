@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화관 티켓 예매 실습</title>
+    <link rel="stylesheet" href="../css/101_JS실습문제2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h4>🎬 영화관에서</h4>
+
+      <div class="chat-bubble friend">
+        <p>
+          <span class="emoji">😎</span> <strong>친구:</strong> 야! 오늘
+          <span class="movie-title">어벤져스</span> 보러 갈래?
+        </p>
+      </div>
+
+      <div class="chat-bubble me">
+        <p>
+          <span class="emoji">🤔</span> <strong>나:</strong> 좋아! 몇 명이서 갈
+          건데?
+        </p>
+      </div>
+
+      <div class="chat-bubble friend">
+        <p>
+          <span class="emoji">🎟️</span>
+          <strong>친구:</strong>
+        </p>
+        <div class="ticket-input">
+          총 <input type="number" id="peopleCount" placeholder="0" />
+          명이서 가자!
+        </div>
+      </div>
+
+      <div class="chat-bubble me">
+        <p>
+          <span class="emoji">💰</span> <strong>나:</strong> 알겠어! 예산
+          확인해볼게!
+        </p>
+      </div>
+      <button type="button" onclick="예산확인하기()">예산 확인하기</button>
+
+      <div>
+        <!-- 영화 나이 제한 -->
+        <p>
+          나이 : <input type="number" id="input1" placeholder="나이 입력" />세
+        </p>
+        <button type="button" onclick="영화등급확인()">연령 확인</button>
+
+        <!-- 옷차림 추천 -->
+        <p>
+          기온 : <input type="number" id="input2" placeholder="온도 입력" />°C
+        </p>
+        <button type="button" onclick="옷차림추천()">의상 추천</button>
+
+        <!-- 시험 점수 부모님 반응 -->
+        <p>점수 : <input type="number" id="input3" placeholder="0~100" />점</p>
+        <button type="button" onclick="부모님반응예측()">반응 확인</button>
+
+        <!-- 쿠폰 적용 금액 -->
+        <p>금액 : <input type="number" id="input4" placeholder="금액" />원</p>
+        <button type="button" onclick="쿠폰적용금액()">금액 확인</button>
+
+        <!-- 운동 강도 추천 -->
+        <p>
+          운동시간: <input type="number" id="input5" placeholder="분 단위" />분
+        </p>
+        <p><button type="button" onclick="운동강도추천()">강도 확인</button></p>
+      </div>
+    </div>
+    <script src="../js/101_JS실습문제2.js"></script>
+  </body>
+</html>

@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>03_연산자 copy</title>
-    <link rel="stylesheel" href="../css/03_연산자 copy.css" />
+    <style>
+      #select2 {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <h1>연산자 JS 재설정</h1>
@@ -14,17 +18,18 @@
         <label>두 번째 값 : <input type="number" id="input2" /></label>
       </div>
       <div class="row btn-row">
-        <select id="select">
+        <select id="select1">
           <option value="plus">+</option>
           <option value="minus">-</option>
           <option value="multiple">*</option>
           <option value="division">/</option>
         </select>
+        <label><input type="radio" id="select2">+</label>
         <button onclick="equalFn()">=</button>
       </div>
-    </div>
-    <div class="row">
-      <h2>결과 : <span id="계산결과"></span></h2>
+      <div class="row">
+        <h2>결과 : <span id="계산결과"></span></h2>
+      </div>
     </div>
     <script src="../js/03_연산자 copy.js"></script>
   </body>

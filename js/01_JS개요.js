@@ -16,15 +16,12 @@ const body = document.querySelector("body"); // 웹 페이지 문서 내에서 �
 // 버튼에 장착된 기능을 실행하면 다크모드로 바꾸는 기능(함수) 설정
 // 위 버튼에서 전달받은 어떤 색상이 변수이름에 담겨지고, 담겨진 색상이 글자 또는 배경색으로 변경된다
 function 다크모드() {
-  body.style.color = "white";           // body 태그 안에 존재하는 스타일에서 글자 색상을 흰색으로 변경하겠다.
+  body.style.color = "white"; // body 태그 안에 존재하는 스타일에서 글자 색상을 흰색으로 변경하겠다.
   body.style.backgroundColor = "black"; // body 태그 안에 존재하는 스타일에서 배경 색상을 검은색으로 변경하겠다.
 }
 function 라이트모드() {
   body.style.color = "black";
   body.style.backgroundColor = "white";
-}
-function 반대모드() {
-  body.style.filter = "invert()";
 }
 function 블루모드() {
   body.style.color = "yellow";
@@ -34,3 +31,4 @@ function 핑크모드() {
   body.style.color = "blue";
   body.style.backgroundColor = "pink";
 }
+

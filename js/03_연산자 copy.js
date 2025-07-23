@@ -1,7 +1,7 @@
 const number1 = Number(document.getElementById("input1").value);
 const number2 = Number(document.getElementById("input2").value);
 const result = document.getElementById("계산결과");
-const option = document.getElementById("select").value;
+const option = document.getElementById("select1").value;
 
 function equalFn() {
   if (option === "plus") {

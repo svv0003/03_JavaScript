@@ -42,7 +42,7 @@
     </div>
     <br />
     <hr />
-    
+
     <h3>문제5) 간단한 계산기</h3>
     <input type="number" id="숫자1" placeholder="첫 번째 숫자" />
     <input type="number" id="숫자2" placeholder="두 번째 숫자" />
@@ -53,11 +53,76 @@
     <br />
     <hr />
 
+    <h3>문제6-1) 이미지 크기 조절하기</h3>
+    <img
+      id="조절이미지1"
+      src="https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20250114_142%2F1736789868215zedBR_JPEG%2F70922847340240892_1083818124.jpg&type=sc960_832"
+      alt="샘플 이미지"
+    />
+    <button type="button" onclick="이미지크기조절1('100px')">작게</button>
+    <button type="button" onclick="이미지크기조절1('200px')">보통</button>
+    <button type="button" onclick="이미지크기조절1('300px')">크게</button>
 
+    <h3>문제6-2) 이미지 크기 조절하기(응용편)</h3>
+    <img
+      id="조절이미지2"
+      src="https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20250114_142%2F1736789868215zedBR_JPEG%2F70922847340240892_1083818124.jpg&type=sc960_832"
+      alt="샘플 이미지"
+    />
+    <button type="button" onclick="이미지크기조절2('200px', '100px')">
+      작게
+    </button>
+    <button type="button" onclick="이미지크기조절2('400px', '200px')">
+      보통
+    </button>
+    <button type="button" onclick="이미지크기조절2('600px', '300px')">
+      크게
+    </button>
 
+    <h3>문제7) 글자 스타일 변경하기</h3>
+    <div id="스타일텍스트">이 텍스트의 스타일이 바뀝니다!</div>
+    <button type="button" onclick="글자스타일변경('red', '30px', 'bold')">
+      빨간색 크게
+    </button>
+    <button type="button" onclick="글자스타일변경('blue', '20px', 'normal')">
+      파란색 보통
+    </button>
+    <button type="button" onclick="글자스타일변경('green', '15px', 'italic')">
+      초록색 기울임
+    </button>
 
+    <h3>문제8) 현재 시간 보여주기 기능</h3>
+    <button type="button" onclick="시간보여주기()">현재 시간 확인</button>
+    <div id="시간표시"></div>
 
+    <h3>문제9) 숨기기 / 보이기 기능</h3>
+    <button type="button" onclick="토글기능()">숨기기/보이기</button>
+    <div id="토글박스">👋 안녕하세요! 저를 숨겨보세요!</div>
 
+    <h3>문제10) 색상 맞추기 미니게임</h3>
+    <div id="게임문제">🎯 빨간색 버튼을 찾아서 클릭하세요!</div>
+    <button
+      type="button"
+      onclick="게임체크('red')"
+      style="background-color: red"
+    >
+      빨간색
+    </button>
+    <button
+      type="button"
+      onclick="게임체크('blue')"
+      style="background-color: blue"
+    >
+      파란색
+    </button>
+    <button
+      type="button"
+      onclick="게임체크('green')"
+      style="background-color: green"
+    >
+      초록색
+    </button>
+    <div id="게임결과"></div>
 
     <script src="../js/100_JS실습문제_풀어보기.js"></script>
   </body>

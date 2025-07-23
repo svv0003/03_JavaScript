@@ -1,5 +1,5 @@
 .계산기 {
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
@@ -29,4 +29,10 @@ button {
   background-color: #007bff;
   color: white;
   cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+h2 {
+  margin-top: 20px;
 }
