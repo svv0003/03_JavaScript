@@ -35,6 +35,23 @@ function minusFn() {
   // 우리가 원하는 value 값은 소비자가 작성한 값을 원하는 것이기 때문에
   // 마이너스 버튼을 클릭하지 전까지 소비자가 value 값을 작성할 시간을 주어야 한다
   // 소비자가 작성을 모두 완료했다면 원하는 계산기 버튼을 클릭해서 계산결과 값을 확인할 수 있도록 해야 한다
-  const value1 = num1.value;
-  const value2 = num2.value;
+  const val1 = num1.value;
+  const val2 = num2.value;
+
+  // input의 기본 타입은 text라서 형변환 필수
+  result.innerText = Number(val1)-Number(val2);
+}
+
+function multiFn() {
+  const val1 = Number(num1.value);
+  const val2 = Number(num2.value);
+  result.innerText = val1*val2;
+}
+function divFn() {
+  result.innerText = Number(num1.value)/Number(num2.value);
+}
+function modFn() {
+  const val1 = Number(num1.value);
+  const val2 = Number(num2.value);
+  result.innerText = val1%val2;
 }

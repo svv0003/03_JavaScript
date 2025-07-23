@@ -3,33 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>03_연산자</title>
+    <title>03_연산자 copy</title>
     <link rel="stylesheel" href="../css/03_연산자.css" />
   </head>
   <body>
-    <h1>연산자(Operator)</h1>
-    <h3>산술 연산자 + 계산 만들기</h3>
-    <pre>
-      + : 더하기
-      - : 빼기
-      * : 곱하기
-      / : 나누기-몫
-      % : 나누기-나머지
-    </pre>
+    <h1>연산자 JS 재설정</h1>
     <div class="계산기">
       <div class="row">
         <label>첫 번째 값 : <input type="number" id="input1" /></label>
         <label>두 번째 값 : <input type="number" id="input2" /></label>
       </div>
       <div class="row btn-row">
-        <!-- 버튼 클릭 시 plusFn() 함수 호출(실행) -->
         <select>
           <option id="plus">+</option>
           <option id="minus">-</option>
           <option id="multiple">*</option>
           <option id="division">/</option>
         </select>
-        <button onclick="equalFn()">=</button>
+        <button type="submit" onclick=equalFn()>=</button>
       </div>
     </div>
     <div class="row">
