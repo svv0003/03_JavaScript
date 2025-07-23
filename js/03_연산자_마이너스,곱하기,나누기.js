@@ -25,9 +25,6 @@ console.log(abc);
 // 함수 내부에서 공통으로 사용하는 변수명은 맨 위에 작성
 
 // script가 포함된 HTML 문서 내부에서 input1이라고 작성된 id를 포함한 태그를 바라보겠다를 설정
-const num1 = document.getElementById("input1");
-const num2 = document.getElementById("input2");
-const result = document.getElementById("계산결과");
 
 function minusFn() {
   // value의 값은 반드시 function 기능 내부에서 가져오기를 작성해야 한다

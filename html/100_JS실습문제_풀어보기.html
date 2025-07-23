@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제 기초 1탄</title>
+    <link rel="stylesheel" href="../css/100_JS실습문제1.css" />
+  </head>
+  <body>
+    <h1>실습문제 기초 1탄</h1>
+    <h3>문제1) 기본 알림창 띄우기</h3>
+    <button type="button" onclick="첫번째함수()">클릭해 보세요</button>
+
+    <h3>문제2) 텍스트 변경하기</h3>
+    <div id="메세지영역">여기 텍스트가 바뀔 예정입니다.</div>
+    <button type="button" onclick="텍스트변경()">텍스트 바꾸기</button>
+
+    <h3>문제3) 배경색 변경하기</h3>
+    <button type="button" onclick="배경색변경('pink')">분홍색</button>
+    <button type="button" onclick="배경색변경('lightgreen')">연두색</button>
+    <button type="button" onclick="배경색변경('lightyellow')">노란색</button>
+    <button type="button" onclick="배경색변경('white')">기본</button>
+
+    <h3>문제4) 이름 입력받고 인사하기</h3>
+    <input type="text" id="이름입력" placeholder="이름을 입력하세요">
+    <button type="button" onclick="인사하기()">인사하기</button>
+    <div id="인사결과"></div>
+
+    <h3>inner THML TEXT 차이점</h3>
+    <div>
+      <div id="xInnerHTML"></div>
+      <div id="xInnerText"></div>
+      <button type="button" onclick="Inner확인하기()">확인하기</button>
+    </div>
+
+
+
+
+
+
+
+    <script src="../js/100_JS실습문제_풀어보기.js"></script>
+  </body>
+</html>

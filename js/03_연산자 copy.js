@@ -1,22 +1,19 @@
 const number1 = Number(document.querySelector("#input1").value);
 const number2 = Number(document.getElementById("input2").value);
 const result = document.getElementById("계산결과");
-document.querySelectorAll("select option");
+const optionval = document.querySelector("#select");
 
 function equalFn() {
-  if (id == "plus") {
+  if (optionval == "plus") {
     result.innerText = number1 + number2;
   }
-  if (id == "minus") {
-    alert("두 수의 차는 " + (number1 - number2));
+  if (optionval == "minus") {
     result.innerText = number1 - number2;
   }
-  if (id == "multiple") {
-    alert("두 수의 곱은 " + number1 * number2);
+  if (optionval == "multiple") {
     result.innerText = number1 * number2;
   }
-  if (id == "division") {
-    alert("두 수의 몫은 " + number1 / number2);
+  if (optionval == "division") {
     result.innerText = number1 / number2;
   }
 }
