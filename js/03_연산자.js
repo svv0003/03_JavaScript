@@ -30,7 +30,7 @@ function plusFn() {
 }
 
 function minusFn() {
-  const number1 = document.getElementById("input1").value;
+  const number1 = document.querySelector("#input1").value;
   const number2 = document.getElementById("input2").value;
   alert("number1의 값은 " + number1);
   alert("number2의 값은 " + number2);

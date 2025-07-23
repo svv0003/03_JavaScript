@@ -5,6 +5,7 @@ function 첫번째함수() {
 
 // 3번
 const body = document.querySelector("body");
-function 배경색변경(색상) {
-  body.style.backgroundColor = 색상;
+function 배경색변경(배경색) {
+  body.style.backgroundColor = 배경색;
 }
+
