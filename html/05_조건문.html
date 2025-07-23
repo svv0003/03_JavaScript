@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_조건문</title>
+  </head>
+  <body>
+    <h1>조건문(condition)</h1>
+    <pre>
+      프로그래밍 코드가 해석되는 순서를 제어하는 제어문의 한 종류
+      작성된 조건식에 따라서 수행되는 코드를 변경하는 구문
+    </pre>
+
+    <hr />
+    <h3>if(만약에...)</h3>
+    <pre>
+      <code>
+        if (조건식) {
+          조건식이 true인 경우에 실행할 코드;
+        }
+      </code>
+      * 조건식 : 결과가 true, false인 식(연산)
+      * 조건문 : 조건식의 결과에 따라 실행을 제어하는 구문(if문, switch문)
+    </pre>
+    <h4>입력 받은 수가 양수인지 아닌지 검사(1)</h4>
+    <input type="number" id="input1" />
+    <button type="button" onclick="체크1()">양수인지 아닌지 검사하기</button>
+    <br />
+    <hr />
+
+    <h4>입력 받은 수가 양수인지 아닌지 검사(2)</h4>
+    <input type="number" id="input2" />
+    <button type="button" onclick="체크2()">양수인지 아닌지 검사하기</button>
+    <br />
+    <hr />
+
+    <h1>if(만약에) - else if(아니라면 이런 경우에) - else(모두 아니라면)</h1>
+    <pre>
+      <code>
+        if(조건식1) {
+          조건식1이 true인 경우에만 실행
+        }
+        else if(조건식2) {
+          조건식1이 false, 조건식2가 true인 경우에만 실행
+        }
+        else {
+          위 모든 조건식이 false인 경우에만 실행
+        }
+      </code>
+      * else if 구문은 원하는 만큼 작성 가능하다.
+      * if문, else if문 조건식이 falseㅇ니 경우
+        이후 else if문에서 해당 범위는 제외된다.
+      </pre>
+    <br />
+    <hr />
+
+
+
+
+
+
+
+    
+    <h3>어린이, 청소년, 성인 구분하기</h3>
+    <input type="number" id="input3" required />
+    <button type="button" onclick="체크3()">확인하기</button>
+    <script src="../js/05_조건문.js"></script>
+  </body>
+</html>

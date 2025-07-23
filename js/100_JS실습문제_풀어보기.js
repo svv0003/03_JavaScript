@@ -39,3 +39,12 @@ function Inner확인하기() {
   // innerHTML : 내부에서 HTML 태그를 인식하고 처리한다.
   // innerText : 내부에서 HTML 태그를 인식하지 못해서 오직 순수한 텍스트 값만 다룬다.
 }
+
+function 계산하기(연산자) {
+  const num1 = document.getElementById("숫자1");
+  const num2 = document.getElementById("숫자2");
+  const culResult = document.getElementById("계산결과");
+  if (연산자 == '+') {
+    culResult = num1 + num2;
+  }
+}

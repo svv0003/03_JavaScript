@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_조건문실습</title>
+  </head>
+  <body>
+    <h1>조건문 실습 문제</h1>
+    <h4>실제 상황 1탄</h4>
+    <p>친구 : 야 돈 좀 빌려줘</p>
+    <p>나  : 얼마 필요해?</p>
+    <p>친구 : <input type="number" id="input1">원 빌려줘</p>
+    <p>나  : 확인해볼께</p>
+    <button type="button" onclick="잔액확인하기()">잔액</button>
+    <p id="answer1"></p>
+    <br><hr>
+
+    <h4>홀짝 확인하기</h4>
+    <input type="number" id="input2">
+    <button type="button" onclick="홀짝기능()">확인하기</button>
+    <p id="answer2"></p>
+    <br><hr>
+    
+    <h4>주행비용 계산하기</h4>
+    <p>이동 거리에 따라 주행 비용을 계산해주는 프로그램입니다.</p>
+    <p>이동 거리 : <input type="number" id="input3">km</p>
+    <button type="button" onclick="주행거리계산기능()">계산하기</button>
+    <p id="answer3"></p>
+    
+    <script src="../js/05_조건문실습.js"></script>
+  </body>
+</html>

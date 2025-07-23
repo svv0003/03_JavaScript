@@ -7,7 +7,7 @@
 //                                              + input 내에서 작성한 값
 
 function plusFn() {
-  const number1 = document.getElementById("input1").value;
+  const number1 = document.querySelector("#input1").value;
   const number2 = document.getElementById("input2").value;
   alert("number1의 값은 " + number1); // 글자와 숫자 사이에 +를 작성하면 이어붙이기!
   alert("number2의 값은 " + number2); // 코드 실행 중간에 문제 발생하면 문제를 건너뛰는 것이 아니라 문제 발생한 지점에서 실행을 멈춤
@@ -45,7 +45,7 @@ function multiFn() {
   const number2 = document.getElementById("input2").value;
   alert("number1의 값은 " + number1);
   alert("number2의 값은 " + number2);
-  alert("두 수의 곱은 " + (Number(number1) * Number(number2)));
+  alert("두 수의 곱은 " + Number(number1) * Number(number2));
   console.log(Number(number1) * Number(number2));
   const result = document.getElementById("계산결과");
   result.innerText = Number(number1) * Number(number2);
@@ -56,7 +56,7 @@ function divFn() {
   const number2 = document.getElementById("input2").value;
   alert("number1의 값은 " + number1);
   alert("number2의 값은 " + number2);
-  alert("두 수의 나눈 값의 몫은 " + (Number(number1) / Number(number2)));
+  alert("두 수의 나눈 값의 몫은 " + Number(number1) / Number(number2));
   console.log(Number(number1) / Number(number2));
   const result = document.getElementById("계산결과");
   result.innerText = Number(number1) / Number(number2);

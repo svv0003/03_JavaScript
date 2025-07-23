@@ -1,0 +1,32 @@
+.계산기 {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+.row {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.btn-row {
+  gap: 15px;
+}
+input,
+select,
+button {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}

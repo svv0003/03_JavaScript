@@ -1,51 +1,54 @@
-const number1 = Number(document.querySelector("#input1").value);
+const number1 = Number(document.getElementById("input1").value);
 const number2 = Number(document.getElementById("input2").value);
 const result = document.getElementById("계산결과");
-const optionval = document.querySelector("#select");
+const option = document.getElementById("select").value;
 
 function equalFn() {
-  if (optionval == "plus") {
-    result.innerText = number1 + number2;
-  }
-  if (optionval == "minus") {
-    result.innerText = number1 - number2;
-  }
-  if (optionval == "multiple") {
-    result.innerText = number1 * number2;
-  }
-  if (optionval == "division") {
-    result.innerText = number1 / number2;
+  if (option === "plus") {
+    result.innerHTML = number1 + number2;
+  } else if (option === "minus") {
+    result.innerHTML = number1 - number2;
+  } else if (option === "multiple") {
+    result.innerHTML = number1 * number2;
+  } else if (option === "division") {
+    if (number2 === 0) {
+      result.innerHTML = "0으로 나눌 수 없습니다";
+    } else {
+      result.innerHTML = (number1 / number2).toFixed(2); // 소수점 2자리
+    }
   }
 }
 
 /*
 let a;
 let b;
+let calResult;
+const number1 = Number(document.getElementById("input1").value);
+const number2 = Number(document.getElementById("input2").value);
+const result = document.getElementById("계산결과");
+const option = document.getElementById("select").value;
 function equalFn() {
-  const number1 = document.querySelector("#input1").value;
-  const number2 = document.getElementById("input2").value;
-  const calculate = document.querySelectorAll("select.option");
-  const result = document.getElementById("계산결과");
   alert("number1의 값은 " + number1);
   alert("number2의 값은 " + number2);
-  if ((id = "plus")) {
+  if (option === "plus") {
     a = "합은";
     b = "+";
-  }
-  if ((id = "minus")) {
+    calResult = number1 + number2;
+  } else if (option === "minus") {
     a = "차는";
     b = "-";
-  }
-  if ((id = "multiple")) {
+    calResult = number1 - number2;
+  } else if (option === "multiple") {
     a = "곱은";
     b = "*";
-  }
-  if ((id = "division")) {
+    calResult = number1 * number2;
+  } else if (option === "division") {
     a = "몫은";
     b = "/";
+    if (number2 === 0) {
+      result.innerText = "0으로 나눌 수 없습니다";
+    }
   }
-  alert("두 수의" + a + Number(number1) + b + Number(number2));
-  console.log(Number(number1) + b + Number(number2));
-  result.innerText = Number(number1) + b + Number(number2);
+  result.innerText = calResult;
 }
 */
