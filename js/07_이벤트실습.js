@@ -7,6 +7,12 @@ const btn3 = document.getElementById("btn3");
 btn3.addEventListener("click", function(){
   box3.style.backgroundColor = input3.value;
 })
+// Enter로 입력 완료하는 방법
+input3.addEventListener("keyup", function(e){
+  if (e.key == "Enter"){
+    box3.style.backgroundColor = input3.value;
+  }
+})
 
 const box4 = document.getElementById("box4");
 const input4 = document.getElementById("input4");
