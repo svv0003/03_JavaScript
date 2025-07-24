@@ -21,3 +21,4 @@ function exit() {
     document.getElementById("choice").value;
 }
 
+document.get

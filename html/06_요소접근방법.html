@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06_요소 접근 방법</title>
+    <link rel="stylesheet" href="../css/06_요소접근방법.css">
+  </head>
+  <body>
+    <h1>DOM (Document Object Model)</h1>
+    <pre>
+      웹 문서(HTML)의 모든 요소를 객체 형식으로 표현한 것
+      (HTML 요소 == JS에서 객체라고 부른다.)
+
+      -> 문서 내 특정 요소에 접근 가능
+         + 요소(객체)에 속성 값을 세팅 또는 얻어올 수 있다.
+    </pre>
+    document.getElementById("id속성값");
+    document.getElementByClassName("class속성값");
+
+    <hr />
+    <h1>DOM을 이용한 요소 접근하기</h1>
+    <pre>
+      1. id로 접근하기    : document.getElementById("id속성값");
+         -> id가 일치하는 요소(객체)를 얻어옴
+
+      2. class로 접근하기 : document.getElementsByClassName("class속성값");
+         -> class가 일치하는 모든 요소(객체)를 얻어와서 배열 형태로 반환
+    
+      3. name으로 접근하기 : document.getElementsByName("name속성값");
+         -> name으로 일치하는 모든 요소(객체)를 얻어와서 목록 형태로 반환
+
+      4. tag로 접근하기   : document.getElementsByTagName("tag");
+         -> tag 이름이 일치하는 모든 요소를 얻어와서 리스트 목록 형태로 반환
+
+      5. CSS 선택자로 접근하기   : document.querySelector("CSS 선택자");
+         -> 선택자가 선택한 요소 중 첫 번째 요소를 반환
+                              document.querySelectorAll("CSS 선택자");
+         -> 선택자가 선택한 요소 모두를 리스트 배열 형태로 반환
+    </pre>
+
+    <hr />
+    <h3>
+      카카오톡 모양의 채팅 화면 만들기
+      <div class="chatting">
+        <div id="chatting-bg">
+          <p><span>입력되는 채팅 출력</span></p>
+          <p><span>입력되는 채팅 출력</span></p>
+          <p><span>입력되는 채팅 출력</span></p>
+        </div>
+      </div>
+
+      <div class="chatting-input">
+        <input type="text" id="user-input" />
+        <button onclick="readValue()">입력</button>
+      </div>
+    </h3>
+  </body>
+</html>
