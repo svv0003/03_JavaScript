@@ -20,7 +20,7 @@ function 주문추가기능() {
     default : alert("메뉴를 선택하세요.");
   }
   // 주문 추가
-  orders = `${orders} + ${foodName} - ${price}원<br>`;
+  orders += `${foodName} - ${price}원<br>`;
 
   // 주문 결과 화면에 표시하기
   document.getElementById("result").innerHTML = orders;
@@ -30,4 +30,22 @@ function 주문추가기능() {
 ${foodName} : ${price}원
 `;
 */
+}
+
+function 주문초기화기능() {
+  orders="";
+  document.getElementById("result").innerHTML = "";
+  document.getElementById("menuSelect").value = "";
+}
+
+function 주문완료기능() {
+  if (orders=="") {
+    alert("주문한 메뉴가 없습니다.");
+  } else {
+    alert("주문이 완료되었습니다.");
+    // orders를 지우기 전에 orders 값을 어디로 전송해야 하지 않나?
+    orders="";
+    // 이중 함수 : 함수 내 다른 함수의 코드를 실행하도록 설계하는 방식
+    주문초기화기능();
+  }
 }
