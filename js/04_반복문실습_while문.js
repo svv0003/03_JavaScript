@@ -5,7 +5,6 @@
 //  고객이 원하는 메뉴를 주문하는 것은 다양한 선택지가 존재하기 때문에 let 사용!
 //  애초에 빈 공간임을 개발자 눈으로 확인하고 싶다면 let menu = ""; 형식 사용 가능!
 
-
 //  undefined : 초기값 설정을 안 해서 나오는 결과
 //  let orders = ""; -> 없는 값으로 인식해서 undefined 결과 방지
 let orders = "";
@@ -18,11 +17,28 @@ function 주문추가기능() {
   const menu = document.getElementById("menuSelect").value;
   let foodName, price;
   switch (Number(menu)) {
-    case 1 : foodName="피자" ; price=15000 ; ++pizzaCount ; break;
-    case 2 : foodName="치킨" ; price=18000 ; ++chickenCount ; break;
-    case 3 : foodName="햄버거" ; price=8000 ; ++burgerCount ; break;
-    case 4 : foodName="음료" ; price=3000 ; ++drinkCount ; break;
-    default : alert("메뉴를 선택하세요.");
+    case 1:
+      foodName = "피자";
+      price = 15000;
+      ++pizzaCount;
+      break;
+    case 2:
+      foodName = "치킨";
+      price = 18000;
+      ++chickenCount;
+      break;
+    case 3:
+      foodName = "햄버거";
+      price = 8000;
+      ++burgerCount;
+      break;
+    case 4:
+      foodName = "음료";
+      price = 3000;
+      ++drinkCount;
+      break;
+    default:
+      alert("메뉴를 선택하세요.");
   }
   // 주문 추가
   // ++orderCount는 주문을 추가한 상태에서 현재 주문이 어디까지 추가됐는지 바로 확인 가능
@@ -41,12 +57,17 @@ ${foodName} : ${price}원
 
 function 주문초기화기능() {
   orders = "";
+  orderCount = 0;
+  pizzaCount = 0;
+  chickenCount = 0;
+  burgerCount = 0;
+  drinkCount = 0;
   document.getElementById("result").innerHTML = "";
   document.getElementById("menuSelect").value = "";
 }
 
 function 주문완료기능() {
-  if (orders=="") {
+  if (orders == "") {
     alert("주문한 메뉴가 없습니다.");
   } else {
     alert("주문이 완료되었습니다.");
@@ -55,4 +76,29 @@ function 주문완료기능() {
     // 이중 함수 : 함수 내 다른 함수의 코드를 실행하도록 설계하는 방식
     주문초기화기능();
   }
+}
+
+function 비밀번호체크() {
+  let tryCount = 0;
+  let pwTry = document.getElementById("비밀번호입력").value;
+  // == 양 옆이 일치할 경우 true
+  // != 양 옆이 일치하지 않을 경우 true
+  while (pwTry != "1234") {
+    // prompt() : 값을 입력할 수 있는 alert() 창 같은 존재
+    //            확인, 취소 버튼 존재
+    //            입력창에 작성해서 값을 전송하는 방식
+    // while문 속에서 prompt()의 취소 버튼은 의미 없다
+    //  -> if (password == null); {
+    //        document.ElementById("결과창").innerHTML = "로그인 취소";
+    //        return;   => 더 이상 아래 코드 실행하지 않고 돌려보내는 기능
+    //     }
+    pwTry = prompt("비밀번호가 틀렸습니다. 다시 입력하세요.");
+    if (pwTry == null) {
+      document.getElementById("결과창").innerHTML = "로그인 최소되었습니다.";
+      return;
+    }
+  }
+  document.getElementById(
+    "결과창"
+  ).innerHTML = `<h6>비밀번호를 찾았습니다!</h6>`;
 }
