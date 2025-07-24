@@ -9,18 +9,25 @@
 //  undefined : 초기값 설정을 안 해서 나오는 결과
 //  let orders = ""; -> 없는 값으로 인식해서 undefined 결과 방지
 let orders = "";
+let orderCount = 0;
+let pizzaCount = 0;
+let chickenCount = 0;
+let burgerCount = 0;
+let drinkCount = 0;
 function 주문추가기능() {
   const menu = document.getElementById("menuSelect").value;
   let foodName, price;
   switch (Number(menu)) {
-    case 1 : foodName="피자" ; price=15000 ; break;
-    case 2 : foodName="치킨" ; price=18000 ; break;
-    case 3 : foodName="햄버거" ; price=8000 ; break;
-    case 4 : foodName="음료" ; price=3000 ; break;
+    case 1 : foodName="피자" ; price=15000 ; ++pizzaCount ; break;
+    case 2 : foodName="치킨" ; price=18000 ; ++chickenCount ; break;
+    case 3 : foodName="햄버거" ; price=8000 ; ++burgerCount ; break;
+    case 4 : foodName="음료" ; price=3000 ; ++drinkCount ; break;
     default : alert("메뉴를 선택하세요.");
   }
   // 주문 추가
-  orders += `${foodName} - ${price}원<br>`;
+  // ++orderCount는 주문을 추가한 상태에서 현재 주문이 어디까지 추가됐는지 바로 확인 가능
+  // orderCount++는 주문을 추가하기 전 단계가 확인되서 사용하지 않는다.
+  orders += `${++orderCount}번 : ${foodName} - ${price}원<br>`;
 
   // 주문 결과 화면에 표시하기
   document.getElementById("result").innerHTML = orders;
@@ -33,7 +40,7 @@ ${foodName} : ${price}원
 }
 
 function 주문초기화기능() {
-  orders="";
+  orders = "";
   document.getElementById("result").innerHTML = "";
   document.getElementById("menuSelect").value = "";
 }
@@ -44,7 +51,7 @@ function 주문완료기능() {
   } else {
     alert("주문이 완료되었습니다.");
     // orders를 지우기 전에 orders 값을 어디로 전송해야 하지 않나?
-    orders="";
+    orders = "";
     // 이중 함수 : 함수 내 다른 함수의 코드를 실행하도록 설계하는 방식
     주문초기화기능();
   }

@@ -72,3 +72,30 @@ function modFn() {
   const result = document.getElementById("계산결과");
   result.innerText = Number(number1) % Number(number2);
 }
+
+// const로 변수를 선언하면 값을 바꿀 수 없으므로 let으로 변수 선언하기!
+let count1 = 0;
+let count2 = 0;
+let count1_1 = 0;
+let count2_1 = 0;
+
+const num2 = document.getElementById("result2");
+const num3 = document.getElementById("result3");
+const num2_1 = document.getElementById("result2-1");
+const num3_1 = document.getElementById("result3-1");
+function 전위증가버튼() {
+  num2.innerHTML = ++count1;
+  num2_1.innerHTML = ++count1_1;
+}
+function 전위감소버튼() {
+  num2.innerHTML = --count1;
+  num2_1.innerHTML = --count1_1;
+}
+function 후위증가버튼() {
+  num3.innerHTML = ++count2;
+  num3_1.innerHTML = count2_1++;
+}
+function 후위감소버튼() {
+  num3.innerHTML = --count2;
+  num3_1.innerHTML = count2_1--;
+}
