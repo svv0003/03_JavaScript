@@ -61,7 +61,6 @@ function 이미지크기조절1(크기) {
 }
 
 function 이미지크기조절2(가로, 세로) {
-  // javaScript 내에서 작성하는 스타일은 2순위 스타일이기 때문에 사용 지양한다.
   document.getElementById("조절이미지2").style.width = 가로;
   document.getElementById("조절이미지2").style.height = 세로;
 }

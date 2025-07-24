@@ -1,5 +1,5 @@
-const peopleCount = document.getElementById("peopleCount");
 function 예산확인하기() {
+  const peopleCount = document.getElementById("peopleCount");
   const pc = Number(peopleCount.value);
   if (pc >= 4) {
     alert("인원이 많으니까 단체 할인 받자!");
@@ -9,8 +9,8 @@ function 예산확인하기() {
 }
 
 // 영화 나이 제한
-const aInput = document.getElementById("input1");
 function 영화등급확인() {
+  const aInput = document.getElementById("input1");
   const age = Number(aInput.value);
   if (age >= 0 && age < 12) {
     alert("전체관람가 영화만 볼 수 있어요");
@@ -22,12 +22,13 @@ function 영화등급확인() {
     alert("모든 영화를 관람할 수 있어요");
   } else {
     alert("나이를 다시 확인하세요");
+    console.log("다시 입력");
   }
 }
 
 // 옷차림 추천
-const tInput = document.getElementById("input2");
 function 옷차림추천() {
+  const tInput = document.getElementById("input2");
   const temp = Number(tInput.value);
   if (temp < 5) {
     alert("패딩과 목도리를 꼭 챙기세요");
@@ -41,8 +42,8 @@ function 옷차림추천() {
 }
 
 // 시험 점수 부모님 반응
-const sInput = document.getElementById("input3");
 function 부모님반응예측() {
+  const sInput = document.getElementById("input3");
   const score = Number(sInput.value);
   if (score >= 90) {
     alert("잘했다 용돈을 올려주마");
@@ -60,8 +61,8 @@ function 부모님반응예측() {
 }
 
 // 쿠폰 적용 금액
-const mInput = document.getElementById("input4");
 function 쿠폰적용금액() {
+  const mInput = document.getElementById("input4");
   const money = Number(mInput.value);
   if (money < 10000) {
     alert("결제 금액 : 원래 금액");
@@ -77,8 +78,8 @@ function 쿠폰적용금액() {
 }
 
 // 운동 강도 추천
-const wInput = document.getElementById("input5");
 function 운동강도추천() {
+  const wInput = document.getElementById("input5");
   const weight = Number(wInput.value);
   if (weight > 0 && weight < 30) {
     alert("가벼운 스트레칭");
@@ -92,3 +93,9 @@ function 운동강도추천() {
     alert("운동 시간을 확인하세요");
   }
 }
+
+
+// 개발자간의 규칙!!
+// class  => CSS        (디자인 적용할 때 많이 사용)
+// id     => JavaScript (기능을 실행할 때 많이 사용)
+// name   => form       (자바에 값을 전달하는 값을 담는 바구니)
