@@ -78,27 +78,33 @@ function 주문완료기능() {
   }
 }
 
+let tryCount = 0;
+const pw = parseInt(Math.random() * 8999 + 1001); // 임의의 4자리 수 비밀번호 생성하기
+const pwShow = document.getElementById("pwShow");
+pwShow.addEventListener("click", function () {
+  alert(pw);
+});
 function 비밀번호체크() {
-  let tryCount = 0;
-  let pwTry = document.getElementById("비밀번호입력").value;
-  // == 양 옆이 일치할 경우 true
-  // != 양 옆이 일치하지 않을 경우 true
-  while (pwTry != "1234") {
-    // prompt() : 값을 입력할 수 있는 alert() 창 같은 존재
-    //            확인, 취소 버튼 존재
-    //            입력창에 작성해서 값을 전송하는 방식
-    // while문 속에서 prompt()의 취소 버튼은 의미 없다
-    //  -> if (password == null); {
-    //        document.ElementById("결과창").innerHTML = "로그인 취소";
-    //        return;   => 더 이상 아래 코드 실행하지 않고 돌려보내는 기능
-    //     }
-    pwTry = prompt("비밀번호가 틀렸습니다. 다시 입력하세요.");
-    if (pwTry == null) {
-      document.getElementById("결과창").innerHTML = "로그인 최소되었습니다.";
-      return;
+  let pwTry = Number(document.getElementById("비밀번호입력").value);
+  if (pwTry == "" || pwTry < 1000) {
+    alert("비밀번호를 제대로 입력하세요.");
+  } else {
+    // == 양 옆이 일치할 경우 true
+    // != 양 옆이 일치하지 않을 경우 true
+    if (pwTry != pw) {
+      // prompt() : 값을 입력할 수 있는 alert() 창 같은 존재
+      //            확인, 취소 버튼 존재
+      //            입력창에 작성해서 값을 전송하는 방식
+      // while문 속에서 prompt()의 취소 버튼은 의미 없다
+      //  -> if (password == null); {
+      //        document.ElementById("결과창").innerHTML = "로그인 취소";
+      //        return;   => 더 이상 아래 코드 실행하지 않고 돌려보내는 기능
+      //     }
+      alert("입력한 비밀번호가 틀렸습니다.");
+      pwTry = null;
+    } else {
+      alert("입력한 비밀번호가 맞습니다.");
+      document.getElementById("결과창").innerHTML = `<h6>비밀번호 찾기 성공!</h6>`;
     }
   }
-  document.getElementById(
-    "결과창"
-  ).innerHTML = `<h6>비밀번호를 찾았습니다!</h6>`;
 }
