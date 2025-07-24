@@ -16,3 +16,39 @@ function check1(btn) {
     btn.style.backgroundColor = "yellow";
   }
 }
+
+
+const test2 = document.getElementById("test2");
+/*** 표준 이벤트 모델 작성법 ***/
+// 요소.addEventListener("이벤트 종류", 이벤트 핸들러(함수))
+
+// test2라는 id에서 어떤 행동이 감지되면 감지된 행동을 듣고, 행위를 추가할거야!
+//                    클릭                        함수
+test2.addEventListener("click", function(){
+  // 투명도 1(불투명) -> 0(투명) 0.01씩 투명도 줄이기
+  let 현재 = test2.style.opacity; // 현재 test2의 투명도 확인
+  // 맨 처음에는 투명도 '' -> 1 대입
+  if (현재 == '') {
+    test2.style.opacity = 1;
+    현재 = 1;
+  }
+  // 투명도 0.1 감소
+  test2.style.opacity = 현재 - 0.1;
+  if (test2.style.opacity < 0) { // 완전히 투명해졌다면
+    test2.style.opacity = 1;  // 다시 불투명하게 만든다.
+  }
+})
+
+
+
+// 만약에 몇 년 뒤에 클릭 기능에 추가적인 기능이 필요한 경우
+// -> 아래와 같이 test2 id 명칭으로 기능을 추가해서 작성 가능
+
+
+// #test2 요소를 클릭하면 클릭 횟수 카운트 생성하기
+let count = 0;
+test2.addEventListener("click", function(){
+  count++;
+  // 표준 이벤트 모델의 이벤트 핸들러 안에서 this == 이벤트가 발생한 요소
+  this.innerText = count; // 증가한 count 값을 test2 내용으로 대입
+})

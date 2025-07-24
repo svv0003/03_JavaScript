@@ -32,3 +32,8 @@ function 핑크모드() {
   body.style.backgroundColor = "pink";
 }
 
+function 다크모드ON() {
+
+}
+
+// .filter = invert() 사용해서 색상 반전 적용 못하려나...
