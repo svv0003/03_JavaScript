@@ -1,6 +1,6 @@
 const menuResult = document.getElementById("menuResult");
 const selectBtn = document.getElementById("selectBtn");
-const menu = ["곱창", "김밥", "제육", "돈까스", "파스타", "파스타", "라면", "삼겹살", "카레", "불고기", "피자", "치킨", "쌀국수", "감자탕", "닭가슴살"];
+const menu = ["곱창", "김밥", "제육", "돈까스", "파스타", "라면", "삼겹살", "카레", "불고기", "피자", "치킨", "쌀국수", "감자탕", "닭가슴살"];
 
 // Math : JS에서 수학적 계산을 위해 제공되는 내장 객체
 // 내장객체 : JS 개발팀이 추가적으로 만든 객체 기능
