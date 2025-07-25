@@ -13,11 +13,10 @@ function order() {
       case 0 : if (orderMenu !== "") {
           alert("주문이 완료되었습니다.");
           document.getElementById("result").innerHTML = `주문이 완료되었습니다!<br>주문: ${orderText}<br>총액: ${total}원`;
-          orderMenu = ""; total = 0;
-       } else {
+        } else {
           document.getElementById("result").innerHTML = "주문한 메뉴가 없습니다!";
-       } break;
-       default : alert("잘못된 번호입니다."); break;
+        } break;
+      default : alert("잘못된 번호입니다."); break;
       }
       break;
     }
@@ -25,9 +24,4 @@ function order() {
     document.getElementById("result").innerHTML = `현재 주문: ${orderMenu}<br>총액: ${total}원`;
   }
   document.getElementById("choice").value = "";
-}
-
-function exit() {
-  running = false;
-  document.getElementById("result").innerHTML = "시스템이 종료되었습니다.";
 }

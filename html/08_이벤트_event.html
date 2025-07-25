@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08_이벤트_event_value</title>
+    <link rel="stylesheet" href="../css/08_이벤트_event.css" />
+  </head>
+  <body>
+    <h1>이벤트 e, event, value, target</h1>
+    <pre>
+1. e와 event는 같은 것이다!
+  e와 event는 모두 이벤트 객체이다.
+
+<code>
+function 기능1(e) {
+  // 기능1에 해당하는 기능 내용들
+}
+
+function 기능2(event) {
+  // 기능2에 해당하는 기능 내용들
+}
+</code>
+    </pre>
+
+    <div class="예제1번클래스">
+      <div>예제1 : e와 event는 동일하다.</div>
+      <pre>
+<code>
+function 클릭처리1(e) {
+  console.log("e 사용 : ", e.type);
+}
+
+function 클릭처리2(event) {
+  console.log("event 사용 : ", event.type);
+}
+</code>
+      </pre>
+      <div class="실습클래스">
+        <button id="btn-e">e 사용 버튼</button>
+        <button id="btn-event">event 사용 버튼</button>
+        <div id="result1" class="결과">버튼을 클릭하세요.</div>
+      </div>
+    </div>
+
+    <div class="예제2번클래스">
+      <div>예제2 : target 사용법</div>
+      <pre>
+<code>
+function 타겟확인(e) {
+  console.log("클릭된 요소 : ", e.target.tagName);
+  console.log("요소 내용 : ", e.target.textContent);
+}
+</code>
+      </pre>
+      <div class="실습클래스"></div>
+        <button class="target-btn" id="btn-A">버튼A</button>
+        <button class="target-btn" id="btn-B">버튼B</button>
+        <span class="target-btn" id="btn-C">span 요소</span>
+        <div id="result2" class="결과">요소를 클릭하세요.</div>
+    </div>
+
+    <div class="예제3번클래스">
+      <div>예제3 : value 사용법</div>
+      <pre>
+<code>
+function 값확인(e) {
+  console.log("입력 값 : ", e.target.value);
+  console.log("입력 타입 : ", e.target.type);
+}
+</code>
+      </pre>
+    </div>
+
+
+
+    <script src="../js/08_이벤트_event.js"></script>
+  </body>
+</html>

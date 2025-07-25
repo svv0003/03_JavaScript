@@ -86,25 +86,30 @@ pwShow.addEventListener("click", function () {
 });
 function 비밀번호체크() {
   let pwTry = Number(document.getElementById("비밀번호입력").value);
-  if (pwTry == "" || pwTry < 1000) {
-    alert("비밀번호를 제대로 입력하세요.");
+  if (pwTry == "" || pwTry < 1000 || pwTry > 9999) {
+    alert("비밀번호 4자리 수를 제대로 입력하세요.");
   } else {
     // == 양 옆이 일치할 경우 true
     // != 양 옆이 일치하지 않을 경우 true
-    if (pwTry != pw) {
-      // prompt() : 값을 입력할 수 있는 alert() 창 같은 존재
-      //            확인, 취소 버튼 존재
-      //            입력창에 작성해서 값을 전송하는 방식
-      // while문 속에서 prompt()의 취소 버튼은 의미 없다
-      //  -> if (password == null); {
-      //        document.ElementById("결과창").innerHTML = "로그인 취소";
-      //        return;   => 더 이상 아래 코드 실행하지 않고 돌려보내는 기능
-      //     }
+    // prompt() : 값을 입력할 수 있는 alert() 창 같은 존재
+    //            확인, 취소 버튼 존재
+    //            입력창에 작성해서 값을 전송하는 방식
+    // while문 속에서 prompt()의 취소 버튼은 의미 없다
+    //  -> if (password == null); {
+    //        document.ElementById("결과창").innerHTML = "로그인 취소";
+    //        return;   => 더 이상 아래 코드 실행하지 않고 돌려보내는 기능
+    //     }
+    if (pwTry > pw) {
       alert("입력한 비밀번호가 틀렸습니다.");
-      pwTry = null;
+      document.getElementById("힌트").innerHTML = "힌트 down";
+    } else if (pwTry < pw) {
+      alert("입력한 비밀번호가 틀렸습니다.");
+      document.getElementById("힌트").innerHTML = "힌트 up";
     } else {
-      alert("입력한 비밀번호가 맞습니다.");
-      document.getElementById("결과창").innerHTML = `<h6>비밀번호 찾기 성공!</h6>`;
+      alert("Congraturation!");
+      document.getElementById(
+        "결과창"
+      ).innerHTML = `<h6>비밀번호 찾기 성공!</h6>`;
     }
   }
 }
