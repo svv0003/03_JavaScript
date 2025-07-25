@@ -35,20 +35,19 @@ const addBtn = document.getElementById("addBtn");
 const shoppingList = document.getElementById("operator");
 const items = [];
 
-function addItem() {
-    //     const itemName = itemInput.value.trim();
-
-    //     빈 값 체크
-    //     if (itemName === "") {
-    //         alert("상품명을 입력하세요.");
-    //         return;
-    //     }
-
-    //     배열에 상품 추가
-    //     items.push(itemName);
+addBtn.addEventListener("click", function () {
+    const itemName = itemInput.value.trim();
+    if (itemName === "") {
+      alert("상품명을 입력하세요.");
+      return;
+    } else {
+      items.push(itemName);
+    }
+    
+})
 
     //     화면에 목록 표시
-    //     let listText = "🛒 쇼핑 목록:\n\n";
+    //     let listText = "쇼핑 목록:\n\n";
     //     for (let i = 0; i < items.length; i++) {
     //         listText += `${i + 1}. ${items[i]}\n`;
     //     }
