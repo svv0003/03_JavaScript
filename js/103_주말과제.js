@@ -32,8 +32,8 @@ calculateBtn.addEventListener("click", function(){
 
 const itemInput = document.getElementById("itemInput");
 const addBtn = document.getElementById("addBtn");
-const shoppingList = document.getElementById("operator");
-const items = [];
+const shoppingList = document.getElementById("shoppingList");
+let items = [];
 
 addBtn.addEventListener("click", function () {
     const itemName = itemInput.value.trim();
@@ -43,11 +43,9 @@ addBtn.addEventListener("click", function () {
     } else {
       items.push(itemName);
     }
-    
-})
-
-    //     화면에 목록 표시
-    //     let listText = "쇼핑 목록:\n\n";
+    shoppingList.textContent = items;
+})   
+    let listText = "쇼핑 목록:\n\n";
     //     for (let i = 0; i < items.length; i++) {
     //         listText += `${i + 1}. ${items[i]}\n`;
     //     }
