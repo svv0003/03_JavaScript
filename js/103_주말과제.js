@@ -1,7 +1,7 @@
 const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
 const operator = document.getElementById("operator");
-const calculateBtn = document.getElementById("calculatorBtn");
+const calculateBtn = document.getElementById("calculateBtn");
 const calcResult = document.getElementById("calc-result");
 
 calculateBtn.addEventListener("click", function () {
@@ -25,8 +25,8 @@ calculateBtn.addEventListener("click", function () {
         result = number1 / number2;
       }
     }
+    calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
   }
-  calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
 });
 /*
     switch (op) {
@@ -51,6 +51,7 @@ const itemInput = document.getElementById("itemInput");
 const addBtn = document.getElementById("addBtn");
 const shoppingList = document.getElementById("shopping-list");
 let items = [];
+let count = 0;
 
 function addItem() {
   const itemName = itemInput.value.trim();
@@ -62,7 +63,13 @@ function addItem() {
 
   items.push(itemName);
 
-  let listText = "🛒 쇼핑 목록:\n\n";
+  let listText = "쇼핑 목록:\n";
+  /*
+  while (count < items.length){
+    count++;
+    listText += `${count}. ${items[count-1]}\n`;
+  }
+  */
   for (let i = 0; i < items.length; i++) {
     listText += `${i + 1}. ${items[i]}\n`;
   }
