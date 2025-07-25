@@ -62,15 +62,14 @@ function 커피주문기능() {
     default:
       menu = "메뉴를 선택하세요";
       price = 0;
-      description = "메뉴가 선택되지 않았습니다"
+      description = "메뉴가 선택되지 않았습니다";
   }
   // ${} : 템플릿 리터럴  (변수 삽입 문법)
   //       ES6부터 제공되는 문법
   //       ``(백틱, 역따옴표) 안에 사용하고자 하는 변수를 작성할 때 ${} 내부에 변수명 작성
   // ex)   coResult.innerHTML=`${price}`;
   // ex)   coResult.innerHTML=`주문하신 메뉴는 ${price}원이고, ${설명}이 특징입니다.`;
-  coResult.innerHTML =
-`<pre>메뉴 : ${menu}
+  coResult.innerHTML = `<pre>메뉴 : ${menu}
 가격 : ${price}원
 설명 : ${description}</pre>`;
 }
