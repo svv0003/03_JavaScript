@@ -1,14 +1,24 @@
 const lotteryNumber = document.getElementById("lotteryNumber");
-const delete = document.getElementById("delete");
+const listDelete = document.getElementById("listDelete");
 const lottoList = document.getElementById("lottoList");
 let lotto = [];
-lotteryNumber.addEventListener("click", function(){
-    while (lotto.length<6) {
-        let num = parseInt(Math.random()*45+1);
-        if (lotto.indexOf(num) == -1) {
-            lotto.push(num);
-        }
+let count = 0;
+
+lotteryNumber.addEventListener("click", function () {
+  ++count;
+  while (lotto.length < 6) {
+    let num = parseInt(Math.random() * 45 + 1);
+    if (lotto.indexOf(num) == -1) {
+      lotto.push(num);
     }
-    alert(lotto);
-    lottoList.innerHTML += `${lotto}<br><br>`;
-})
+  }
+  lotto.sort((a, b) => a - b);
+  // alert(lotto);
+  lottoList.innerHTML += `${count}번 : ${lotto}<br><br>`;
+  lotto = [];
+});
+
+listDelete.addEventListener("click", function () {
+  lottoList.textContent = "";
+  count = 0;
+});

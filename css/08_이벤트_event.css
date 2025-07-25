@@ -85,7 +85,7 @@ button:hover {
   margin-top: 10px;
   font-family: monospace;
   min-height: 20px;
-  white-space: pre-line;      /* \n 작동하기 위한 스타일 태그 */
+  white-space: pre-line; /* \n 작동하기 위한 스타일 태그 */
 }
 
 #btn-C {
