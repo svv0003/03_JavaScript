@@ -8,7 +8,7 @@ passwordConfirm.addEventListener("keyup", function (e) {
   if (e.key == "Enter") {
     // pw1.trim()
     // password.value === ""  똑같은 의미
-    // trim() = 스페이스바로 작성한 띄어쓰기 글자취급 X
+    // trim() = 스페이스바로 작성한 띄어쓰기 글자 취급 X
     // 공백 제거 후 비밀번호 입력했는지 확인
     if (pw1.length == 0 || pw2.length == 0) {
       alert("비밀번호를 입력하세요.");
