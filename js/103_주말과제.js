@@ -1,41 +1,41 @@
-  // const 명칭 = num1, num2, operator, calculateBtn, calcResult
+const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const operator = document.getElementById("operator");
+const calculateBtn = document.getElementById("calculatorBtn");
+const calcResult = document.getElementById("calcResult");
 
-    // calculateBtn 클릭 이벤트 설정
+calculateBtn.addEventListener("click", function(){
+  const number1 = Number(num1.value);
+  const number2 = Number(num2.value);
+  const op = operator.value;
+  
+  if (num1.value == "" || num2.value == "") {
+    alert("숫자를 입력하세요");
+  } else if (op == "") {
+      alert("등호를 선택하세요");
+    } else {
+        switch(op){
+          case "+": result = number1 + number2; break;
+          case "-": result = number1 - number2; break;
+          case "*": result = number1 * number2; break;
+          case "/": if (number2 === 0) {
+            calcResult.textContent = "0으로 나눌 수 없습니다.";
+            return;
+            } else {
+               result = number1 / number2; break;
+            }
 
-    // 입력값 가져오기 (숫자로 변환)
-    // const number1 = Number(num1.value);
-    // const number2 = Number(num2.value);
-    // const op = operator.value;
+            calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
 
-    // 빈 값 체크
-    // if (num1.value === "" || num2.value === "") {
-    //     calcResult.textContent = "숫자를 입력하세요.";
-    //     return;
-    // }
+      }
+})
 
-    // switch문으로 연산자에 따라 계산
-    // case "+": result = number1 + number2; break;
-    // case "-": result = number1 - number2; break;
-    // case "*": result = number1 * number2; break;
-    // case "/":
-    //     if (number2 === 0) {
-    //         calcResult.textContent = "0으로 나눌 수 없습니다.";
-    //         return;
-    //     }
-    //     result = number1 / number2;
-    //     break;
+const itemInput = document.getElementById("itemInput");
+const addBtn = document.getElementById("addBtn");
+const shoppingList = document.getElementById("operator");
+const items = [];
 
-    // 결과 출력
-    // calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
-
-
-    // const 명칭 = itemInput, addBtn, shoppingList
-
-    // 쇼핑 목록을 저장할 배열
-    // const items = [];
-
-    // 상품 추가 함수
-    // function addItem() {
+function addItem() {
     //     const itemName = itemInput.value.trim();
 
     //     빈 값 체크
