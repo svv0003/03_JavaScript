@@ -9,6 +9,7 @@ calculateBtn.addEventListener("click", function () {
   const number2 = Number(num2.value);
   const op = operator.value;
 
+  /*
   if (num1.value == "" || num2.value == "") {
     alert("숫자를 입력하세요");
   } else {
@@ -28,24 +29,23 @@ calculateBtn.addEventListener("click", function () {
     calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
   }
 });
-/*
-    switch (op) {
-      case "+": result = number1 + number2; break;
-      case "-": result = number1 - number2; break;
-      case "*": result = number1 * number2; break;
-      case "/":
-        if (number2 == 0) {
-          calcResult.textContent = "0으로 나눌 수 없습니다.";
-          return;
-        } else {
-          result = number1 / number2;
-          break;
-        }
-      }
-      calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
-    }
-});
 */
+
+  switch (op) {
+    case "+": result = number1 + number2; break;
+    case "-": result = number1 - number2; break;
+    case "*": result = number1 * number2; break;
+    case "/":
+      if (number2 == 0) {
+        calcResult.textContent = "0으로 나눌 수 없습니다.";
+        return;
+      } else {
+        result = number1 / number2;
+        break;
+      }
+    }
+    calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
+});
 
 const itemInput = document.getElementById("itemInput");
 const addBtn = document.getElementById("addBtn");
