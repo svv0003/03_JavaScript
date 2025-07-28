@@ -52,3 +52,6 @@ inputPhone.addEventListener("input", (e) => {
     phoneResult.classList.remove("check");
   }
 })
+
+
+// 만약 하이픈을 입력 안 한다면?

@@ -32,9 +32,15 @@ calculateBtn.addEventListener("click", function () {
 */
 
   switch (op) {
-    case "+": result = number1 + number2; break;
-    case "-": result = number1 - number2; break;
-    case "*": result = number1 * number2; break;
+    case "+":
+      result = number1 + number2;
+      break;
+    case "-":
+      result = number1 - number2;
+      break;
+    case "*":
+      result = number1 * number2;
+      break;
     case "/":
       if (number2 == 0) {
         calcResult.textContent = "0으로 나눌 수 없습니다.";
@@ -43,8 +49,8 @@ calculateBtn.addEventListener("click", function () {
         result = number1 / number2;
         break;
       }
-    }
-    calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
+  }
+  calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
 });
 
 const itemInput = document.getElementById("itemInput");
@@ -55,28 +61,35 @@ let count = 0;
 
 function addItem() {
   const itemName = itemInput.value.trim();
-  
+
   if (itemName === "") {
     alert("상품명을 입력하세요.");
     return;
   }
-  
+
   items.push(itemName);
-  
-  let listText = "쇼핑 목록:\n";
-  /*
-  while (count < items.length){
+
+  let listText = "쇼핑 목록:\n\n";
+  while (count < items.length) {
+    listText += `${count + 1}. ${items[count]}\n`;
     count++;
-    listText += `${count}. ${items[count-1]}\n`;
   }
-  */
-  for (let i = 0; i < items.length; i++) {
-    listText += `${i + 1}. ${items[i]}\n`;
-  }
+
   shoppingList.textContent = listText;
 
   itemInput.value = "";
   itemInput.focus();
+
+  /*
+    while (count < items.length) {
+      listText += `${count+1}. ${items[count]}\n`;
+      count++;
+    }
+
+    for (let i = 0; i < items.length; i++) {
+      listText += `${i + 1}. ${items[i]}\n`;
+    }
+  */
 }
 
 addBtn.addEventListener("click", addItem);

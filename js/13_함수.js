@@ -136,3 +136,5 @@ function 확인하기(기능) {
   console.log("obj.name :", obj.name);
   console.log("obj.age :", obj.age);
 }
+
+// 하나의 key에 하나 이상의 value 설정 가능한가?
