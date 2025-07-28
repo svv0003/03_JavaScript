@@ -1,3 +1,4 @@
+// 계산기 만들기
 const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
 const operator = document.getElementById("operator");
@@ -53,6 +54,7 @@ calculateBtn.addEventListener("click", function () {
   calcResult.textContent = `${number1} ${op} ${number2} = ${result}`;
 });
 
+// 쇼핑 목록 만들기
 const itemInput = document.getElementById("itemInput");
 const addBtn = document.getElementById("addBtn");
 const shoppingList = document.getElementById("shopping-list");
@@ -79,23 +81,23 @@ function addItem() {
 
   itemInput.value = "";
   itemInput.focus();
-
-  /*
-    while (count < items.length) {
-      listText += `${count+1}. ${items[count]}\n`;
-      count++;
-    }
-
-    for (let i = 0; i < items.length; i++) {
-      listText += `${i + 1}. ${items[i]}\n`;
-    }
-  */
 }
 
 addBtn.addEventListener("click", addItem);
 
-itemInput.addEventListener("keyup", function (e) {
+itemInput.addEventListener("keyup", function(e) {
   if (e.key === "Enter") {
     addItem();
   }
 });
+
+/*
+  while (count < items.length) {
+    listText += `${count+1}. ${items[count]}\n`;
+    count++;
+  }
+
+  for (let i = 0; i < items.length; i++) {
+    listText += `${i + 1}. ${items[i]}\n`;
+  }
+*/

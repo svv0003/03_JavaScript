@@ -55,3 +55,4 @@ inputPhone.addEventListener("input", (e) => {
 
 
 // 만약 하이픈을 입력 안 한다면?
+// 하나 이상의 정규표현식 중 하나라도 부합한다면 true 형식으로 만들 수 있나?
