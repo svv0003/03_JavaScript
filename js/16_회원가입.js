@@ -65,7 +65,7 @@ inputPw.addEventListener("input", (e) => {
     pwResult.textContent = "유효한 비밀번호 형식입니다.";
     pwResult.classList.add("check");
     pwResult.classList.remove("error");
-    checkList["inputPw"] = true; // 비밀번호 형식이 일치한다면 위 작성한 checkList에서 inputPw에 해당하는 boolean을 true로 변경하겠다.
+    checkList["inputPw"] = true;      // 비밀번호 형식이 일치한다면 위 작성한 checkList에서 inputPw에 해당하는 boolean을 true로 변경하겠다.
   } else {
     pwResult.textContent = "유효하지 않은 비밀번호 형식입니다.";
     pwResult.classList.add("error");
@@ -74,6 +74,9 @@ inputPw.addEventListener("input", (e) => {
   }
   checkPw기능();
 });
+
+// 굳이 위에도 checkPw기능을 넣는 이유가?
+
 
 inputPwCheck.addEventListener("input", checkPw기능);
 
