@@ -164,3 +164,5 @@ btn.addEventListener("click", (e) => {
   alert("회원가입이 완료되었습니다.");
   signupForm.submit(); // 회원가입 폼 제출 완료 기능 설정
 });
+
+// e.preventDefault();를 사용 안 한 경우는?
