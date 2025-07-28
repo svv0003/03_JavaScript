@@ -55,14 +55,14 @@ let count = 0;
 
 function addItem() {
   const itemName = itemInput.value.trim();
-
+  
   if (itemName === "") {
     alert("상품명을 입력하세요.");
     return;
   }
-
+  
   items.push(itemName);
-
+  
   let listText = "쇼핑 목록:\n";
   /*
   while (count < items.length){
