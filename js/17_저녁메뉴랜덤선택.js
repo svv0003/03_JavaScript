@@ -51,41 +51,39 @@ function displayMenus() {
 displayMenus();
 
 // 메뉴 추가
-addBtn.addEventListener(
-  "click",
-  function () {
-    const newMenu = menuInput.value.trim();
+addBtn.addEventListener("click", function () {
+  const newMenu = menuInput.value.trim();
 
-    // 1번 빈값 체크하기
-    if (newMenu == "") {
-      validationMessage.textContent = "메뉴를 입력하세요.";
-      validationMessage.className = "validation-message error";
-      menuInput.focus();
-      return;
-    }
+  // 1번 빈값 체크하기
+  if (newMenu == "") {
+    validationMessage.textContent = "메뉴를 입력하세요.";
+    validationMessage.className = "validation-message error";
+    menuInput.focus();
+    return;
+  }
 
-    //   if (menuRegex.test(newMenu)) {   } else {
-    // 일 때 , else 만 필요할 경우
-    // if (menuRegex.test(newMenu)) { -> if (!menuRegex.test(newMenu)) {
-    // 정규식과 소비자가 작성한 메뉴입력을 비교했을 때
-    // 정규식과 일치하지 않는게 사실이라면 = true로 설정하겠다   맨 앞에 ! 붙여줌
-    // 만약에 문제가 존재할 경우
-    if (!menuRegex.test(newMenu)) {
-      validationMessage.textContent =
-        "한글, 영어, 숫자만 포함해서 2~20글자 입력하세요.";
-      validationMessage.className = "validation-message error";
-      menuInput.focus();
-      return;
-    }
+  //   if (menuRegex.test(newMenu)) {   } else {
+  // 일 때 , else 만 필요할 경우
+  // if (menuRegex.test(newMenu)) { -> if (!menuRegex.test(newMenu)) {
+  // 정규식과 소비자가 작성한 메뉴입력을 비교했을 때
+  // 정규식과 일치하지 않는게 사실이라면 = true로 설정하겠다   맨 앞에 ! 붙여줌
+  // 만약에 문제가 존재할 경우
+  if (!menuRegex.test(newMenu)) {
+    validationMessage.textContent =
+      "한글, 영어, 숫자만 포함해서 2~20글자 입력하세요.";
+    validationMessage.className = "validation-message error";
+    menuInput.focus();
+    return;
+  }
 
-    if (menus.includes(newMenu)) {
-      validationMessage.textContent = "이미 존재하는 메뉴입니다.";
-      validationMessage.className = "validation-message error";
-      menuInput.focus();
-      return; // displayMenus()까지 가지 못하도록 기능 중단할 수 있게 되돌리기
-    }
+  if (menus.includes(newMenu)) {
+    validationMessage.textContent = "이미 존재하는 메뉴입니다.";
+    validationMessage.className = "validation-message error";
+    menuInput.focus();
+    return; // displayMenus()까지 가지 못하도록 기능 중단할 수 있게 되돌리기
+  }
 
-    /*
+  /*
     // 메뉴명을 잘못 작성한 경우
     if (menuRegex.test(newMenu)) {
       // 중복된 메뉴인 경우
@@ -103,15 +101,12 @@ addBtn.addEventListener(
     }
     */
 
-    menus.push(newMenu);
-    menuInput.value = "";
-    validationMessage.textContent = `${newMenu} 메뉴가 추가되었습니다.`;
-    validationMessage.className = "validation-message success";
-    displayMenus();
-  }
-
-  // 2번 정규식 검사 테스트에서 문제 없는 경우
-);
+  menus.push(newMenu);
+  menuInput.value = "";
+  validationMessage.textContent = `${newMenu} 메뉴가 추가되었습니다.`;
+  validationMessage.className = "validation-message success";
+  displayMenus();
+});
 
 // enter 키로 메뉴 추가하기
 menuInput.addEventListener("keyup", (e) => {

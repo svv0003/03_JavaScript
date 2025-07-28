@@ -132,20 +132,24 @@ inputName.addEventListener("input", (e) => {
 
 btn.addEventListener("click", (e) => {
   if (checkList.inputId == false) {
+    e.preventDefault();
     alert("아이디가 유효하지 않습니다.");
     inputId.focus();
     return;
   } else if (checkList.inputPw == false) {
+    e.preventDefault();
     alert("비밀번호가 유효하지 않습니다.");
     inputPw.focus();
     return;
   } else if (checkList.inputPwCheck == false) {
+    e.preventDefault();
     alert("비밀번호 확인이 유효하지 않습니다.");
     inputPwCheck.focus();
     return;
   } else if (checkList.inputName == false) {
+    e.preventDefault();
     alert("이름이 유효하지 않습니다.");
-    inputName.focus();
+    inputName.focus();            // 제출 방지 : button type이 submit일 때 주로 사용
     return;
   }
 
