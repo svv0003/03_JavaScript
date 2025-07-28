@@ -62,8 +62,7 @@ addBtn.addEventListener("click", function () {
     return;
   }
 
-  //   if (menuRegex.test(newMenu)) {   } else {
-  // 일 때 , else 만 필요할 경우
+  // if (menuRegex.test(newMenu)) {} else {} 일 때 , else만 필요할 경우
   // if (menuRegex.test(newMenu)) { -> if (!menuRegex.test(newMenu)) {
   // 정규식과 소비자가 작성한 메뉴입력을 비교했을 때
   // 정규식과 일치하지 않는게 사실이라면 = true로 설정하겠다   맨 앞에 ! 붙여줌
