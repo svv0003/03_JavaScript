@@ -10,8 +10,6 @@ const resetBtn = document.getElementById("resetBtn");
 //    result.textContent += e.target.textContent; -> function이 없기 때문에 this 사용 불가, addEventListener 앞 요소 명칭을 직접 작성해야 함
 // numbers[i].addEventListener("click", e => {
 //    result.textContent += e.target.textContent; -> function이 없기 때문에 this 사용 불가, 요소 명칭 대신 e.target 직접 작성해야 함
-// numbers[i].addEventListener("click", (e) => {
-//    result.textContent += e.target.textContent;
 
 /*
 for (let i = 0; i < numbers.length; i++) {
