@@ -51,7 +51,7 @@ function displayMenus() {
 displayMenus();
 
 // 메뉴 추가
-addBtn.addEventListener("click", function () {
+function addMenu() {
   const newMenu = menuInput.value.trim();
 
   // 1번 빈값 체크하기
@@ -107,10 +107,13 @@ addBtn.addEventListener("click", function () {
   displayMenus();
 });
 
-// enter 키로 메뉴 추가하기
+// 버튼 클릭
+addBtn.addEventListener("click", addMenu);
+
+// 엔터 입력
 menuInput.addEventListener("keyup", (e) => {
-  if (e.key === "enter") {
-  }
+  if (e.key === "Enter") {
+    addMenu();
 });
 
 // 랜덤 메뉴 선택
