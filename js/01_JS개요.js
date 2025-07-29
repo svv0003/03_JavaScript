@@ -12,7 +12,7 @@ function externalFn() {
 /* JS 맛보기 */
 // 버튼 클릭 시 body 태그의 글자색, 배경색을 변경
 
-const body = document.querySelector("body"); // 웹 페이지 문서 내에서 선택할 것(바디
+const body = document.querySelector("body"); // 웹 페이지 문서 내에서.선택할 것(바디태그를)
 // 버튼에 장착된 기능을 실행하면 다크모드로 바꾸는 기능(함수) 설정
 // 위 버튼에서 전달받은 어떤 색상이 변수이름에 담겨지고, 담겨진 색상이 글자 또는 배경색으로 변경된다
 function 다크모드() {
