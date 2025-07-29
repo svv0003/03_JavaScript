@@ -69,7 +69,7 @@ btn2.addEventListener("click", () => {
     // console.log("모델명 : ", 모델명);    <- this 없어서 오류 발생
     console.log("가격 : ", this.가격);
     // console.log("가격 : ", 가격);       <- this 없어서 오류 발생
-    console.log("브랜드 : ", this.브랜드);
+    console.log("브랜드t : ", this.브랜드);
     console.log("브랜드 : ", 브랜드);
   };
 
@@ -130,6 +130,7 @@ function Student(name, grade, classRoom, number, score) {
     ${score}점입니다.
     `);
   };
+  this.intro();
 }
 
 // 생성자 함수 호출
