@@ -13,6 +13,6 @@ fetchPost.addEventListener("click", function () {
       <strong>id : </string>${data.id}<br><br>
       <strong>title : </string>${data.title}<br><br>
       <strong>body : </string>${data.body}
-      `
-    })
+      `;
+    });
 });
