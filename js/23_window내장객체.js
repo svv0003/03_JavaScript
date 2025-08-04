@@ -16,7 +16,7 @@ open24PopUp.addEventListener("click", () => {
   window.open("24_팝업창.html", "_blank", options.toString());
 });
 
-const open25StopWatch = document.getElementById("open_25stopWatch")
+const open25StopWatch = document.getElementById("open_25stopWatch");
 open25StopWatch.addEventListener("click", () => {
   let options = [];
   options.push("width=500");
