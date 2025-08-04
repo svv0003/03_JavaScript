@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>22_DOM</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/22_DOM.css" />
+    <link rel="icon" type="image/png" href="../img/logo.png" />
+  </head>
+  <body>
+    <h1>DOM (Document Object Model)</h1>
+    <pre>
+      HTML 웹문서, 웹페이지 문서를 객체 기반으로 표현한 것
+      -> HTML 문서에 작성된 내용을 tree 구조로 나타냈을 때
+          각각의 태그, TEXT, COMMENT를 Node라고 한다.
+      
+      Node : document(문서) tree 구조를 구성하는 모든 개별 요소를 가르키는 기본 단위
+             웹 페이지를 구성하는 모든 것
+             -> HTML 태그, div 태그, p 태그, input 태그, 태그 내부 텍스트(글자), 주석 등
+                코드에 작성된 모든 내용은 각각의 node 라고 불린다.
+                node 내부에서 태그와 요소는 분리된다.
+            
+      nodeJS : 프론트엔드 코드로 작성된 모든 것에 대한 JavaScript 설정을 나타낸다.
+               nodeJS로 프론트엔드 구성이 가능한 사람  - JavaScript 언어 기반 프론트엔드 기술자
+               nodeJS로 백엔드 구성이 가능한 사람     - JavaScript 언어 기반 백엔드 기술자
+               (기술 도구는 nodeJS를 확용하지만 언어의 요구사항이 JS가 아니라 TS 나 다른 언어일 수도 있다.)
+
+      요소  : element (태그와 태그 내부에 작성된 텍스트, value까지 포함하는 것을 의미)
+
+
+      document : {
+        DOCTYPE : html, 
+        HTML : {
+          HEAD : {
+            TITLE : {TEXT : "문서 제목"},
+            STYLE : {...},
+            META  : {...}, 
+          },
+          BODY : {
+            H1      : {TEXT : "제목", ATTRIBUTE : "속성"},
+            COMMENT : {TEXT : "주석 내용"},
+            DIV     : {...},
+            ul#test{childNodes : [], innerText : 123, }
+          }
+        }
+      }
+    </pre>
+
+    <script src="../js/22_DOM.js"></script>
+  </body>
+</html>
