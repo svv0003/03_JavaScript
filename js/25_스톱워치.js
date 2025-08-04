@@ -98,3 +98,9 @@ resetBtn.addEventListener("click", () => {
 // const li = document.createElement("li");
 // li.innerTEXT = display.innerText;
 // #recordContainer 첫 번째 자식으로 li 추가 (append)
+
+recordBtn.addEventListener("click", e => {
+  const li = document.createElement("li");
+  li.innerText = display.innerText;
+  recordContainer.prepend(li);
+})
