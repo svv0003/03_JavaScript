@@ -24,6 +24,9 @@ npm ini -y : npm init으로 설치할 때 나오는 모든 질문에 미리 "네
 
              키워드는요? (keywords:)
 
+npm i      : nome_module / package-lock.json 생성!
+
+
 
  
 txt 파일이냐, 한글 파일이냐 와 같은 차이
