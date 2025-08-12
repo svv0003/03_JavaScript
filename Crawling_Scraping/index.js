@@ -26,7 +26,9 @@ npm ini -y : npm init으로 설치할 때 나오는 모든 질문에 미리 "네
 
 npm i      : nome_module / package-lock.json 생성!
 
-
+npm init -y // 을 이용하여 기본 package 설치한다.
+npm install puppeteer // 크롤링 패키지 설치
+node index.js // 실행하기
 
  
 txt 파일이냐, 한글 파일이냐 와 같은 차이
